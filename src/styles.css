@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: #000;
+  color: white;
+}
+
+button {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 5px;
+  height: 35px;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+}
+
+text {
+  font-family: 'Jost', sans-serif;
+}

@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+  
+  .header-area { grid-area: 1 / 1 / 2 / 3; }
+  .screen-area { grid-area: 2 / 1 / 3 / 2; }
+  .explain-area { grid-area: 2 / 2 / 3 / 3; }

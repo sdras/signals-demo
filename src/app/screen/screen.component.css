@@ -1,0 +1,114 @@
+.screen {
+  transform: perspective(400px) rotateY(20deg);
+  margin-top: 30px;
+  position: relative;
+  width: 300px;
+}
+
+.screen-svg {
+  position: absolute;
+  width: 350px;
+  margin-top: 30px;
+}
+
+.screen-png {
+  position: absolute;
+}
+
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+  fill: none;
+}
+
+.cls-8 {
+  clip-path: url(#clippath);
+}
+
+.cls-9, .cls-10 {
+  fill: #fa2256;
+}
+
+.cls-11, .cls-12, .cls-13, .cls-14, .cls-15 {
+  fill: #fff;
+}
+
+.cls-16, .cls-17 {
+  fill: #30e0a1;
+}
+
+.cls-18, .cls-19 {
+  fill: #11cabe;
+}
+
+.cls-20 {
+  fill: #246cf9;
+}
+
+.cls-21 {
+  fill: #1e1f25;
+}
+
+.cls-22 {
+  fill: #3c4254;
+}
+
+.cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+  stroke-dasharray: 0 0 0 0;
+}
+
+.cls-2, .cls-6 {
+  stroke: #fa2256;
+}
+
+.cls-3 {
+  stroke: #3c4254;
+}
+
+.cls-4, .cls-5 {
+  stroke: #246cf9;
+}
+
+.cls-5, .cls-6 {
+  stroke-width: .5px;
+}
+
+.cls-12 {
+  font-size: 12px;
+}
+
+.cls-12, .cls-13, .cls-10, .cls-14, .cls-19, .cls-17, .cls-15 {
+  font-family: Helvetica, Helvetica;
+}
+
+.cls-12, .cls-13, .cls-10, .cls-14, .cls-19, .cls-17, .cls-15, .cls-23 {
+  isolation: isolate;
+}
+
+.cls-13 {
+  font-size: 36px;
+}
+
+.cls-10, .cls-14, .cls-19 {
+  font-size: 14px;
+}
+
+.cls-24 {
+  opacity: .6;
+}
+
+.cls-25 {
+  opacity: .5;
+}
+
+.cls-17 {
+  font-size: 13px;
+}
+
+.cls-15 {
+  font-size: 16px;
+}
+
+.cls-7 {
+  stroke: #48a1d9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

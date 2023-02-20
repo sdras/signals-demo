@@ -15,7 +15,7 @@
     "@angular/compiler": "^14.0.0-rc.0",
     "@angular/core": "^14.0.0-rc.0",
     "@angular/forms": "^14.0.0-rc.0",
-    "@angular/platform-browser": "^14.0.0-rc.0",
+    "@angular/platform-browser": "^14.2.12",
     "@angular/platform-browser-dynamic": "^14.0.0-rc.0",
     "@angular/router": "^14.0.0-rc.0",
     "rxjs": "~7.5.0",
