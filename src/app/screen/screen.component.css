@@ -1,6 +1,5 @@
 .screen {
   transform: perspective(400px) rotateY(20deg);
-  margin-top: 30px;
   position: relative;
   width: 300px;
 }
@@ -13,6 +12,7 @@
 
 .screen-png {
   position: absolute;
+  border: 1px solid #515050;
 }
 
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {

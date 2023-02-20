@@ -18,3 +18,23 @@ button {
 text {
   font-family: 'Jost', sans-serif;
 }
+
+h1 {
+  color: #7fa3ee;
+}
+
+p {
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.code {
+  font-family: 'JetBrains Mono', monospace;
+  background: #222;
+  border-radius: 4px;
+  border: 1px solid #515050;
+  padding: 10px;
+  color: #c2e4f9;
+  font-size: 15px;
+}
