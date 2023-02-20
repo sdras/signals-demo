@@ -4,17 +4,27 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ScreenComponent } from './screen/screen.component';
-
+import { MatStepperModule } from '@angular/material/stepper';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StepperComponent } from './stepper/stepper.component';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScreenComponent
+    ScreenComponent,
+    StepperComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule, 
+    MatStepperModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{
+    provide: STEPPER_GLOBAL_OPTIONS,
+    useValue: { displayDefaultIndicatorType: false }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

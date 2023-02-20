@@ -1,0 +1,7 @@
+.mat-horizontal-content-container {
+  height: 100%;
+}
+.mat-horizontal-stepper-content {
+  height: 100%;
+  display: flex;
+}

@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+html, body { height: 100%; }
 
 body {
   font-family: 'Jost', sans-serif;
@@ -27,6 +30,7 @@ p {
   font-size: 19px;
   font-weight: 400;
   letter-spacing: 0.02em;
+  font-family: 'Jost', sans-serif;
 }
 
 .code {
@@ -37,4 +41,8 @@ p {
   padding: 10px;
   color: #c2e4f9;
   font-size: 15px;
+}
+
+.mat-stepper-horizontal, .mat-stepper-vertical {
+  background-color: transparent;
 }
