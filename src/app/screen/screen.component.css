@@ -2,6 +2,14 @@
   transform: perspective(400px) rotateY(20deg);
   position: relative;
   width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 1100px) {
+  .screen {
+    width: 100px;
+    margin: auto;
+  }
 }
 
 .screen-svg {
