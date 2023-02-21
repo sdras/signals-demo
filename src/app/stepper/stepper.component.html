@@ -28,7 +28,7 @@
       <p>There are a few amounts on this page derived from our users. In the key at the bottom, you can see the change between this month and last month.</p>
       <p>We don't necessarily want a whole new value to update manually. Computed values allow us to show a derived value, a new view from our data in our signal.</p>
       <p class="code">// Automatically updates when `users` changes:<br>
-        const thismonth = computed(() => users() - lastmonth);</p>
+        const thisMonth = computed(() => users() - lastMonth);</p>
       <p>Computed values are cached based on their dependencies and will only update when necessary.</p>
       <p>Any signals read by that calculation will be tracked as dependencies, and the value recalculated when any these dependencies change.</p>
     </div>

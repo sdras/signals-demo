@@ -2,7 +2,7 @@
 
 This little explainer serves as a visual explainer for some of the concepts Angular is interested in discussing with the introduction of Signals-based reactivity. Though Signals are not a new concept in the framework space, these differ radically both in terms of public API as well as behavioral details (such as eager vs lazy computation, batching behavior, equality, cleanup, nesting, etc).
 
-Demo site: 
+Demo site: [https://angular-signals.netlify.app/](https://angular-signals.netlify.app/)
 
 If you're interested in being part of the discussion, please join us in our discussion space for our RFC!
 
