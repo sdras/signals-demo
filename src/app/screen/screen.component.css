@@ -15,6 +15,7 @@
   border: 1px solid #515050;
 }
 
+
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
   fill: none;
 }
@@ -111,4 +112,10 @@
   stroke: #48a1d9;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+/* animation starter */
+
+#key-bk, #thismonth, #lastmonth, #keybk, .dot, .label {
+  opacity: 0;
 }
