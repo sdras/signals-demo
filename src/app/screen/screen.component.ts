@@ -27,7 +27,6 @@ export class ScreenComponent implements AfterViewInit {
     this.createOpener()
 
     this.appService.stringSubject.subscribe(data => {
-      console.log('next subscribed value: ' + data);
       this.stepIndex = data;
 
       if (this.stepIndex === 1) this.createStep2()

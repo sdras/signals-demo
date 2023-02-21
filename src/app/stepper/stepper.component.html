@@ -19,7 +19,7 @@
       users.set(160000);</p>
       <p>We can also update the users as new users come on to the platform.</p>
       <p class="code">users.update(user => user + 1);</p>
-      <p>We do this via <code>SettableSignal</code>. In addition to being a getter function, we can also change the value of the signal, and notify any dependents of the change). The API includes <code>.set</code> for replacement, <code>.update</code> for deriving a new value, and <code>.mutate</code> for performing internal mutation of the value.</p>
+      <p>We do this via <code>SettableSignal</code>. In addition to being a getter function, we can also change the value of the signal, and notify any dependents of the change. The API includes <code>.set</code> for replacement, <code>.update</code> for deriving a new value, and <code>.mutate</code> for performing internal mutation of the value.</p>
     </div>
   </mat-step>
     
@@ -40,7 +40,7 @@
       <p>With <code>effect()</code>, we can schedule and run a side-effectful function inside a reactive context.</p>
       <p>Let's say we want to redraw the connecting lines when a user amount changes, in case the lines are adjusting.</p>
       <p class="code">
-        users.set(180000);
+        users.set(180000);<br>
         effect(() => redrawLines());
       </p>
     </div>
