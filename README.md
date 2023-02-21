@@ -8,6 +8,8 @@ If you're interested in being part of the discussion, please join us in our disc
 
 [https://github.com/angular/angular/discussions/49090](https://github.com/angular/angular/discussions/49090)
 
+And here is a stackblitz that allows you to [play around with this initial version](https://stackblitz.com/edit/angular-ednkcj?file=src%2Fmain.ts), compliments to Enea Jahollari.
+
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0-rc.2.
