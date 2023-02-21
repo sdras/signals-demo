@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { AppService } from './../app.service';
 import { gsap } from 'gsap';
 
 @Component({
@@ -11,6 +12,10 @@ export class ScreenComponent implements AfterViewInit {
   opener = gsap.timeline();
   dur:number = 2
   path:number = 0
+  stepIndex:number = 0
+
+  constructor(private appService: AppService) {
+  }
 
   @ViewChild("lines", {read: ElementRef}) private lines: ElementRef;
 
@@ -18,6 +23,11 @@ export class ScreenComponent implements AfterViewInit {
     this.path = this.lines.nativeElement.getTotalLength()
 
     this.createOpener()
+
+    this.appService.stringSubject.subscribe(data => {
+      console.log('next subscribed value: ' + data);
+      this.stepIndex = data;
+    });
   }
 
   createOpener() {

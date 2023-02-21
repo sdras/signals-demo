@@ -10,6 +10,8 @@ import { StepperComponent } from './stepper/stepper.component';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { GhcornerComponent } from './ghcorner/ghcorner.component';
 
+import { AppService } from './app.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,7 @@ import { GhcornerComponent } from './ghcorner/ghcorner.component';
   providers: [{
     provide: STEPPER_GLOBAL_OPTIONS,
     useValue: { displayDefaultIndicatorType: false }
-  }],
+  }, AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

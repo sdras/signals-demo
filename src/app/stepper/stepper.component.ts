@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { AppService } from './../app.service';
 import { gsap } from 'gsap';
 
 @Component({
@@ -11,13 +12,17 @@ export class StepperComponent implements AfterViewInit {
   stepText = gsap.timeline();
   stepIndex:number = 0
 
+  constructor(private appService: AppService) {
+  }
+
   ngAfterViewInit() {
     this.stepAnim(0)
   }
 
   onStepChange(event: any): void {
     console.log(event.selectedIndex);
-    this.stepIndex = event.selectedIndex
+    this.stepIndex = event.selectedIndex;
+    this.appService.passValue(event.selectedIndex);
 
     this.stepText.restart()
     this.stepAnim(this.stepIndex)
