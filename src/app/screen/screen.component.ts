@@ -13,6 +13,8 @@ export class ScreenComponent implements AfterViewInit {
   dur:number = 2
   path:number = 0
   stepIndex:number = 0
+  userNum:number = 159845
+  monthNum:number = 2.36
 
   constructor(private appService: AppService) {
   }
@@ -27,6 +29,10 @@ export class ScreenComponent implements AfterViewInit {
     this.appService.stringSubject.subscribe(data => {
       console.log('next subscribed value: ' + data);
       this.stepIndex = data;
+
+      if (this.stepIndex === 1) this.createStep2()
+      if (this.stepIndex === 2) this.createStep3()
+      if (this.stepIndex === 3) this.createStep4()
     });
   }
 
@@ -69,4 +75,35 @@ export class ScreenComponent implements AfterViewInit {
     }, 4)
   }
 
+  createStep2() {
+    setTimeout(() => {
+      this.userNum = 160000
+    }, 3000)
+
+    setTimeout(() => {
+      this.userNum = 160001
+    }, 5000)
+  }
+
+  createStep3() {
+    setTimeout(() => {
+      this.monthNum = 2.45
+    }, 3000)
+  }
+
+  createStep4() {
+    gsap.set("#lines", {
+      strokeDashoffset: `${this.path}px`,
+      strokeDasharray: `${this.path}px`
+    })
+
+    gsap.to("#lines", 1.5, {
+      duration: 5,
+      delay: 4,
+      strokeDashoffset: 0
+    })
+  }
+
 }
+
+
