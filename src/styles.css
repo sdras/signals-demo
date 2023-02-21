@@ -26,7 +26,7 @@ h1 {
   color: #7fa3ee;
 }
 
-p {
+p, li {
   font-size: 19px;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -43,6 +43,21 @@ p {
   font-size: 15px;
 }
 
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  color: #c2e4f9;
+}
+
 .mat-stepper-horizontal, .mat-stepper-vertical {
   background-color: transparent;
+}
+
+a, a:visited {
+  color: #7fa3ee;
+  text-decoration: none;
+}
+
+.emphasis {
+  color: #eeba7f;
 }

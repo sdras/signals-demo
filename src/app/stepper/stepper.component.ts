@@ -24,7 +24,7 @@ export class StepperComponent implements AfterViewInit {
   }
 
   step1anim() {
-    this.step1.fromTo("p", {
+    this.step1.fromTo(".step1 p", {
       opacity: 0
     },
     {

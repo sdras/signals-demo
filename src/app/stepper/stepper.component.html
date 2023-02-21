@@ -1,20 +1,54 @@
 <mat-vertical-stepper (selectionChange)="onStepChange($event)">
    
-  <mat-step label="Step 1">
-    <p>Let's say you have an app like this one.</p>
-    <p>We want to set up any data we might like to track with a signal. A signal is a value which is "reactive", meaning it can notify interested consumers when it changes.</p>
-    <p class="code">(() => T)</p>
-    <p>Signal are zero-argument functions. When executed, they return the current value of the signal.</p>
-    <p>In this particular app, we might want to track the users, listed here at the top.</p>
-    <p class="code">users = signal(159845);</p>
+  <mat-step label="Step 1: What's a Signal">
+    <div class="step1">
+      <p>Let's say you have an app like this one.</p>
+      <p>We want to set up any data we might like to track with a signal. A signal is a value which is "reactive", meaning it can notify interested consumers when it changes.</p>
+      <p class="code">(() => T)</p>
+      <p>Signal are zero-argument functions. When executed, they return the current value of the signal.</p>
+      <p>In this particular app, we might want to track the users, listed here at the top.</p>
+      <p class="code">users = signal(159845);</p>
+    </div>
   </mat-step>
     
-  <mat-step label="Step 2">
-    Step 2 Content Will Be Here
+  <mat-step label="Step 2: Settable Signals">
+    <div class="step2">
+      <p>Let's say you want to update our users, we know that as of our last update, we now have 160000. We can set that amount.</p>
+      <p class="code">users = signal(159845);<br>
+      <br>
+      users.set(160000);</p>
+      <p>We can also update the users as new users come on to the platform.</p>
+      <p class="code">users.update(user => user + 1);</p>
+      <p>We do this via <code>SettableSignal</code>. In addition to being a getter function, we can also change the value of the signal, and notify any dependents of the change). The API includes <code>.set</code> for replacement, <code>.update</code> for deriving a new value, and <code>.mutate</code> for performing internal mutation of the value.</p>
+    </div>
   </mat-step>
     
-  <mat-step label="Step 3">
+  <mat-step label="Step 3: What is Computed?">
+    <div class="step2">
+      <p>There are a few amounts on this page derived from our users. In the key at the bottom, you can see the change between this month and last month.</p>
+      <p>We don't necessarily want a whole new value to update manually. Computed values allow us to show a derived value, a new view from our data in our signal.</p>
+      <p class="code">// Automatically updates when `users` changes:<br>
+        const thismonth = computed(() => users() - lastmonth);</p>
+      <p>Computed values are cached based on their dependencies and will only update when necessary.</p>
+      <p>Any signals read by that calculation will be tracked as dependencies, and the value recalculated when any these dependencies change.</p>
+    </div>
+  </mat-step>
+
+  <mat-step label="Step 4: Effect!">
     Step 3 Content Will Be Here. It's Done Now...
+  </mat-step>
+
+  <mat-step label="Step 5: What else?">
+    <div class="step5">
+      <p class="emphasis">This is just the beginning!</p>
+      <p>Angular Signals also has:</p>
+      <ul>
+        <li>Flexible effect scheduling, allowing for seamless integration with Angular, and other adjacent libraries like RxJS</li>
+        <li>Leaning into the compiler to optimize various reactive operations, especially DOM APIs and updates</li>
+        <li>Lazy evaluation, so that the user doesn't have to explicitly batch operations</li>
+      </ul>
+      <p>Head over to the <a href="https://github.com/angular/angular/discussions/49090" target="_blank">RFC for further updates and discussion! ></a></p>
+    </div>
   </mat-step>
     
 </mat-vertical-stepper>
