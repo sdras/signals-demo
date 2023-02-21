@@ -8,12 +8,14 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StepperComponent } from './stepper/stepper.component';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { GhcornerComponent } from './ghcorner/ghcorner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScreenComponent,
-    StepperComponent
+    StepperComponent,
+    GhcornerComponent
   ],
   imports: [
     BrowserModule,

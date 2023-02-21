@@ -8,23 +8,23 @@ import { gsap } from 'gsap';
 })
 export class StepperComponent implements AfterViewInit {
 
-  step1 = gsap.timeline();
+  stepText = gsap.timeline();
+  stepIndex:number = 0
 
   ngAfterViewInit() {
-    this.step1anim()
+    this.stepAnim(0)
   }
 
   onStepChange(event: any): void {
     console.log(event.selectedIndex);
+    this.stepIndex = event.selectedIndex
 
-    if (event.selectedIndex === 0) {
-      this.step1.restart()
-      this.step1anim()
-    }
+    this.stepText.restart()
+    this.stepAnim(this.stepIndex)
   }
 
-  step1anim() {
-    this.step1.fromTo(".step1 p", {
+  stepAnim(stepIndex:number) {
+    this.stepText.fromTo(`.step${stepIndex + 1} p, .step${stepIndex + 1} li`, {
       opacity: 0
     },
     {
