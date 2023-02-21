@@ -30,7 +30,7 @@ export class StepperComponent implements AfterViewInit {
     {
       duration: 2,
       opacity: 1,
-      stagger: 1.5,
+      stagger: 0.3,
       ease: "sine.out"
     }, 1)
   }
