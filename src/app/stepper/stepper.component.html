@@ -24,7 +24,7 @@
   </mat-step>
     
   <mat-step label="Step 3: What is Computed?">
-    <div class="step2">
+    <div class="step3">
       <p>There are a few amounts on this page derived from our users. In the key at the bottom, you can see the change between this month and last month.</p>
       <p>We don't necessarily want a whole new value to update manually. Computed values allow us to show a derived value, a new view from our data in our signal.</p>
       <p class="code">// Automatically updates when `users` changes:<br>
@@ -35,7 +35,15 @@
   </mat-step>
 
   <mat-step label="Step 4: Effect!">
-    Step 3 Content Will Be Here. It's Done Now...
+    <div class="step4">
+      <p>There are times when we might want something to occur when a signal has a new value.</p>
+      <p>With <code>effect()</code>, we can schedule and run a side-effectful function inside a reactive context.</p>
+      <p>Let's say we want to redraw the connecting lines when a user amount changes, in case the lines are adjusting.</p>
+      <p class="code">
+        users.set(180000);
+        effect(() => redrawLines());
+      </p>
+    </div>
   </mat-step>
 
   <mat-step label="Step 5: What else?">
