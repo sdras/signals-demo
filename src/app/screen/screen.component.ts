@@ -9,7 +9,7 @@ import { gsap } from 'gsap';
 })
 export class ScreenComponent implements AfterViewInit {
 
-  opener = gsap.timeline();
+  opener = gsap.timeline({delay: 2.5});
   dur:number = 2
   path:number = 0
   stepIndex:number = 0
@@ -69,8 +69,8 @@ export class ScreenComponent implements AfterViewInit {
       opacity: 1,
       ease: "sine.out"
     }, 5)
-    this.opener.to("#lines", 1.5, {
-      duration: 4,
+    this.opener.to("#lines", {
+      duration: 1.5,
       strokeDashoffset: 0
     }, 4)
   }
@@ -78,6 +78,17 @@ export class ScreenComponent implements AfterViewInit {
   createStep2() {
     setTimeout(() => {
       this.userNum = 160000
+
+      gsap.to("#num", {
+        duration: 0.5,
+        textShadow: "#FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px",
+      })
+      gsap.to("#num", {
+        duration: 1,
+        delay: 3.5,
+        textShadow: "1px 1px 1px rgba(0, 0, 0, 0)",
+      })
+      
     }, 3000)
 
     setTimeout(() => {
@@ -88,6 +99,17 @@ export class ScreenComponent implements AfterViewInit {
   createStep3() {
     setTimeout(() => {
       this.monthNum = 2.45
+
+      gsap.to("#month", {
+        duration: 0.5,
+        textShadow: "0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18",
+      })
+      gsap.to("#month", {
+        duration: 1,
+        delay: 3.5,
+        textShadow: "1px 1px 1px rgba(0, 0, 0, 0)",
+      })
+
     }, 3000)
   }
 
@@ -97,8 +119,8 @@ export class ScreenComponent implements AfterViewInit {
       strokeDasharray: `${this.path}px`
     })
 
-    gsap.to("#lines", 1.5, {
-      duration: 5,
+    gsap.to("#lines", {
+      duration: 2,
       delay: 4,
       strokeDashoffset: 0
     })
