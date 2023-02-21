@@ -16,15 +16,14 @@ export class ScreenComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.path = this.lines.nativeElement.getTotalLength()
-    console.log(this.path);
 
     this.createOpener()
   }
 
   createOpener() {
     gsap.set("#lines", {
-      strokeDashoffset: '475px',
-      strokeDasharray: '475px'
+      strokeDashoffset: `${this.path}px`,
+      strokeDasharray: `${this.path}px`
     })
   
     this.opener.to(".label", {
