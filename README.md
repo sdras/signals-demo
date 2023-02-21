@@ -8,7 +8,13 @@ If you're interested in being part of the discussion, please join us in our disc
 
 [https://github.com/angular/angular/discussions/49090](https://github.com/angular/angular/discussions/49090)
 
+![Angular Signals Demo](https://i.ibb.co/tKfJ7WK/signals-og.jpg)
+
 And here is a stackblitz that allows you to [play around with this initial version](https://stackblitz.com/edit/angular-ednkcj?file=src%2Fmain.ts), compliments to Enea Jahollari.
+
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"/>
+</a>
 
 ---
 
