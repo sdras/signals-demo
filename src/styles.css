@@ -43,6 +43,10 @@ p, li {
   font-size: 15px;
 }
 
+span.code {
+  padding: 2px;
+}
+
 code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 15px;

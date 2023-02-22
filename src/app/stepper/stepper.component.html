@@ -2,12 +2,14 @@
    
   <mat-step label="Step 1: What's a Signal">
     <div class="step1">
-      <p>Let's say you have an app like this one.</p>
-      <p>We want to set up any data we might like to track with a signal. A signal is a value which is "reactive", meaning it can notify interested consumers when it changes.</p>
+      <p>Let's say we have an app like this one, and we want to set up data so that other places in the code will get notified when their value changes.</p>
+      <p>A signal is perfect for this, because it gives us the ability to track a single "reactive" value and automatically notify interested consumers when it changes.</p>
       <p class="code">(() => T)</p>
-      <p>Signal are zero-argument functions. When executed, they return the current value of the signal.</p>
-      <p>In this particular app, we might want to track the users, listed here at the top.</p>
+      <p>In this particular app, we might want to track the <span class="code">users</span> count found at the top-left with the label "All Users".</p>
+      <p>At the start of their life, signals can be given an initial value.</p>
       <p class="code">users = signal(159845);</p>
+      <p>This will then be tracked and send a "signal" to different parts of our code with succeeding updates to the value.</p>
+      <p>Signals are zero-argument functions. When executed, they return the current value of the signal.</p>
     </div>
   </mat-step>
     
